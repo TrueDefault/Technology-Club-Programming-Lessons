@@ -81,7 +81,7 @@ public class MyClass {
 	 * 
 	 * 5. List two purposes of classes.
 	 * 
-	 * 6. Fill in the blank: an object's data type and class have the same _________, except if the object's data type is one of 
+	 * 6. Fill in the blank: a variable's data type and class have the same _________, except if the data type is one of 
 	 *    the eight primitive data types.
 	 * 
 	 * 7. What does a constructor do? What is the syntax for calling a constructor?
