@@ -44,8 +44,8 @@ public class MyClass {
 	// https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html). They do not have defined behaviour.
 	
 	// In this lesson, you will learn to write a class called Automobile. CLASSES are used to create objects, which, again, are the 
-	// backbone of all Java programs. They define an object's state and behaviour in the form of ATTRIBUTES and METHODS. Please refer 
-	// to the Automobile class now (Automobile.java).
+	// backbone of all Java programs. They define an object's state and behaviour in the form of ATTRIBUTES and METHODS. Please go  
+	// through the Automobile class now (Automobile.java).
 	
 	public static void main(String[] args) {
 		// You create an object using the "new" keyword and the constructor. Notice that the datatype is Automobile - the same
