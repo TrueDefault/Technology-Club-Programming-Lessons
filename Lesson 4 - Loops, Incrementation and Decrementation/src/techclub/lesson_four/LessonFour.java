@@ -132,11 +132,8 @@ public class LessonFour {
 		 * 
 		 * 6. (HARD CHALLENGE) Find the sum of the numbers in the sequence 2.1, -5.6, 9.1, -12.6, ... 72.1, -75.6.
 		 *    
-		 *    Note #1: Java does NOT allow you to add an integer and a double together. To circumvent this problem, add ".0" to the end
-		 *    of any integers you use to make Java think that you have a double. For example, 2 would become 2.0 instead.
-		 *    
-		 *    Note #2: You might get a long decimal as your answer, such as 10.700000002, or -83.499999987. If you get such an answer, round
-		 *    it to one decimal place. For example, you would round 10.700000002 to 10.7.
+		 *    Note: You might get a long decimal as your answer, such as 10.700000002, or -83.499999987. If you get such an answer, round
+		 *    it in your head to one decimal place. For example, you would round 10.700000002 to 10.7.
 		 */
 	}
 }
