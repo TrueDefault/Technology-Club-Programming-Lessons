@@ -1,6 +1,6 @@
 package techclub.lesson_one;
 
-/* Lesson 1: Printing to console, variables, primitive data types, initialization */
+/* Lesson 1: Printing to console, variables, arithmetic operators, primitive data types, initialization */
 public class LessonOne {
 	public static void main(String[] args) {
 		/* Printing to console/terminal */
@@ -42,9 +42,25 @@ public class LessonOne {
 		System.out.println(aBiggerNumber);	// prints 100
 		
 		
-		/*===================================
-		 * THE 8 PRIMITIVE DATA TYPES
-		 *===================================
+		/* ARITHMETIC OPERATORS */
+		// + is the addition operator
+		// - is the subtraction operator
+		// * is the multiplication operator
+		// / is the division operator
+		// % is the REMAINDER operator and gives the remainder when one number is divided by another number
+		
+		/* Examples of remainder operator */
+		int remainder = 7 % 3;
+		System.out.println(remainder);	// prints 1, because 7 divided by 3 equals 2 remainder 1.
+		
+		int remainderTwo = 56 % 10;
+		System.out.println(remainderTwo);	// before running the code, what do you think remainderTwo is equal to?
+		
+		
+		/*========================================================
+		 * THE 8 PRIMITIVE DATA TYPES:
+		 * byte, short, int, long, float, double, char, boolean
+		 *========================================================
 		 */
 		
 		byte eightBits = 1; 		 // max value 2^7 - 1
@@ -81,10 +97,12 @@ public class LessonOne {
 		 * 	2. Write a line of code that prints the value of pi + 5.1
 		 * 
 		 * 	3. (Challenge) Use a boolean to help you determine whether the following sentence is true or false:
+		 * 	   "pi - 2.06 is less than 0.8"
 		 * 
-		 * 		"pi - 2.06 is less than 0.8"
+		 * 	   Print the value of your boolean. Is the statement true?
 		 * 
-		 * 		Print the value of your boolean. Is the statement true?
+		 *  4a. Is 7456 divisible by 11? If not, what is the remainder?
+		 *   b. Is 20306 divisible by 26? If not, what is the remainder?
 		 */
 	}
 }
