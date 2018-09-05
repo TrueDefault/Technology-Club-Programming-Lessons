@@ -87,6 +87,26 @@ public class LessonSix {
 		System.out.println(sum);
 	}
 	
+	// Sometimes you will see methods returning "null". If you see the line "return null;" in a method, then it
+	// is returning nothing. In one of the problems on the Programming Contest, you will be asked to return null
+	// in a method. Here is a quick example:
+	
+	/**
+	 * Calculates the area of the rectangle given its length and width. Returns
+	 * the area as a String. If the length or width are negative, then the
+	 * method returns null.
+	 */
+	public static String calcRectangleArea(int length, int width) {
+		if (length < 0 || width < 0) {
+			return null;
+		}
+		int area = length * width;
+		return String.valueOf(area);	// String.valueOf() converts an int into a String.
+	}
+	
+	// Note: you cannot return null when the method's return type is a primitive data type. This is why
+	// the above example returns a String and not an int.
+	
 	
 	// Main method
 	public static void main(String[] args) {
@@ -106,6 +126,12 @@ public class LessonSix {
 		String[] sentenceArray = {"This", "sentence", "is", "short"};
 		System.out.println(LessonSix.concatenateArray(sentenceArray));
 		LessonSix.printStringArrayBackwards(sentenceArray);
+		
+		String rectArea = calcRectangleArea(4, 6);
+		System.out.println(rectArea);
+		
+		String nullRectArea = calcRectangleArea(-3, 5);
+		System.out.println(nullRectArea);
 	}
 	
 	
@@ -116,7 +142,7 @@ public class LessonSix {
 	 * 1. Write a method that multiplies two doubles called num1 and num2, and returns the result.
 	 * 
 	 * 2. Write a method that divides a double called "dividend" by a double called "divisor", and PRINTS (not returns) the result. 
-	 *    Bonus points if you can print an error message in case someone tries to divide by 0 (hint: use an "if" statement!).
+	 *    Bonus points if you can print an error message in case someone tries to divide by 0.
 	 * 
 	 *    Reminder: the symbol for division is /
 	 * 
