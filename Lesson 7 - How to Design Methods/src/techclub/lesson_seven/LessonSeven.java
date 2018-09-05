@@ -36,10 +36,9 @@ public class LessonSeven {
 	 */
 	public static String addExclamation(String string) {
 		if (string.endsWith("!")) {	// Step 4 - Method requires "if" statement
-			return string;
-		} else {
-			return string + "!";
+			return string;	// Method execution stops after a "return" statement
 		}
+		return string + "!";
 	}
 	
 	
@@ -92,7 +91,7 @@ public class LessonSeven {
 	 * 1. Write a method that multiplies two doubles called num1 and num2, and returns the result.
 	 * 
 	 * 2. Write a method that divides a double called "dividend" by a double called "divisor", and PRINTS (not returns) the result. 
-	 *    Bonus points if you can print an error message in case someone tries to divide by 0 (hint: use an "if" statement!).
+	 *    Bonus points if you can print an error message in case someone tries to divide by 0.
 	 * 
 	 *    Reminder: the symbol for division is /
 	 * 
