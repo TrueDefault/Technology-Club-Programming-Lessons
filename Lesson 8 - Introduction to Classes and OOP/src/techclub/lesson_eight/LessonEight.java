@@ -1,7 +1,7 @@
 package techclub.lesson_eight;
 
 /* Introduction to Classes and Object-Oriented Programming */
-public class MyClass {
+public class LessonEight {
 	// Java programs are run through OBJECTS interacting with each other. All of the variables we have been creating - ints, Strings,
 	// arrays, and so on - are actually representations of objects (citation: Java Language Specification section 4.3.1,
 	// https://docs.oracle.com/javase/specs/jls/se8/html/jls-4.html#jls-4.3.1).
