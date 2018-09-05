@@ -100,6 +100,7 @@ public class LessonSix {
 		if (length < 0 || width < 0) {
 			return null;
 		}
+		// No need for "else" block because method execution stops upon executing a "return" statement.
 		int area = length * width;
 		return String.valueOf(area);	// String.valueOf() converts an int into a String.
 	}
