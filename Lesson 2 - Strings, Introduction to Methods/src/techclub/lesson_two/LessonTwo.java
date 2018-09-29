@@ -23,7 +23,7 @@ public class LessonTwo {
 		 */
 		
 		// Observe the syntax of how we call methods: variableName.methodName().
-		// 
+		// Some methods have ARGUMENTS that go in the brackets.
 		
 		// Example 1: Some String methods manipulate String variables to get information about the actual String stored inside.
 		boolean endsInExclamationMark = greeting.endsWith("!");
