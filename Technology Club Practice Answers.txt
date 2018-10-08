@@ -1,0 +1,237 @@
+Technology Club Practice - Answers
+
+Lesson 1:
+
+1. double pi = 3.14;
+
+2. System.out.println(pi + 5.1);
+
+3. boolean piBoolean = pi - 2.06 < 0.8;
+   System.out.println(piBoolean);
+
+   The statement is FALSE!
+
+
+Lesson 2:
+
+1. String upperCase = "I LIKE STRINGS";
+   String lowerCase = upperCase.toLowerCase();
+
+2. String grammaticallyCorrect = lowerCase.replace("i ", "I ") + ".";
+
+
+Lesson 2.1:
+
+1. When you cast a double to an int, the decimal component disappears. For example:
+   
+   double myDouble = 5.4;
+   int myInt = (int) myDouble;
+   System.out.println(myInt);	// prints 5
+
+2. No. That would be like trying to turn a cat into a dog.
+
+3. int first = 34;
+   int second = 23;
+   int third = 987;
+   
+   System.out.println(String.valueOf(first) + String.valueOf(second) + String.valueOf(third));
+
+4. String x = "45";
+   String y = "37";
+   
+   int xInt = Integer.parseInt(x);
+   int yInt = Integer.parseInt(y);
+   System.out.println(xInt + yInt);
+
+
+Lesson 3:
+
+1. NullPointerException, line 1264
+2. -123
+3. myFavouriteCourses[3] = "Chemistry";
+4. String str = "You have learned a new method today";
+   String substr = str.substring(9, 22);
+   System.out.println(substr);
+5. String fullSentence = aSentence[0] + " " + aSentence[1] + " " + aSentence[2] + " " + aSentence[3];
+   System.out.println(fullSentence);
+
+
+Lesson 4 (please go over question 4!):
+
+1. The program will get stuck in an infinite loop that prints 0, 1, 2, 3, ... and up and up forever.
+
+2. The program will get stuck in an infinite loop that prints "I am careless" over and over
+
+3. String[] reverseSentence = {"sentence.", "good", "very", "a", "is", "This"};
+   for (int index = 5; index >= 0; index--) {
+	   System.out.println(reverseSentence[index]);
+   }
+
+4. // Note: You MUST go over this problem because it shows how to concatenate Strings in loops.
+   String concatenatedString = "";
+   for (int index = 0; index < 6; index++) {
+	   concatenatedString = concatenatedString + reverseSentence[index];	// or concatenatedString += reverseSentence[index]; -- concatenatedString is an accumulator variable 
+																			// because we are accumulating the Strings in reverseSentence into concatenatedString.
+   }
+   System.out.println(concatenatedString);
+
+5. The sum is -78. Solution code:
+
+int sum = 0;
+for (int i = 10; i >= -23; i -= 3) {
+	sum += i;
+}
+System.out.println(sum);
+
+6. The sum is -38.5. Solution code:
+
+// We use the fact that 2.1 - 5.6 + 9.1 - 12.6 + ... + 72.1 - 75.6 = 2.1 + 9.1 + ... + 72.1 - 5.6 - 12.6 - ... - 75.6
+
+double currentSum = 0.0;
+for (double currentNumber = 2.1; currentNumber <= 72.1; currentNumber += 7.0) {
+	currentSum += currentNumber;
+}
+for (double currentNumber = 5.6; currentNumber <= 75.6; currentNumber += 7.0) {
+	currentSum -= currentNumber;
+}
+System.out.println(currentSum);
+------------------------------------
+Alternate solution using Math.pow():
+
+double currentSum = 0.0;
+double currentNumberAbsValue = 2.1;
+double currentNumber;
+double termNumber = 1.0;
+while (currentNumberAbsValue <= 75.6) {
+	currentNumber = Math.pow(-1.0, termNumber + 1.0) * currentNumberAbsValue;
+	currentSum += currentNumber;
+	termNumber++;
+	currentNumberAbsValue += 3.5;
+}
+System.out.println(currentSum);
+
+
+Lesson 5:
+
+Evaluating boolean expressions:
+a) 2 > 1 --> true
+b) 1 == 3 --> false
+c) (3 < 2) || !(9 != 4) --> false || !true --> false || false --> false
+d) !(3 < 2) && (9 != 4) --> !false && true --> true && true --> true
+e) (4 == 5 && 5 >= 1) || 3 < 9 --> (false && true) || true --> false || true --> true
+f) (10 < 14 || 10 > 8) && !(7 > 9 || 8 < 3) --> (true || true) && !(false || false) --> true && !false --> true && true --> true
+
+Easy challenge:
+Message prints when i = 0, 1, 3, 8, 9
+
+Medium-Hard challenge:
+Message prints when i = 5, 7
+
+
+Lesson 6 & 7:
+
+Question 1:
+
+/** 
+ * Multiplies the two given numbers together and returns the product. 
+ */
+public static double multiplyDoubles(double num1, double num2) {
+	return (num1 * num2);
+}
+
+Question 2:
+
+/** 
+ * Divides the dividend by the divisor, and returns the quotient. The divisor cannot equal 0. 
+ */
+public static void divideDoubles(double dividend, double divisor) {
+	if (divisor == 0) {
+		System.out.println("You cannot divide by 0!");
+	} else {
+		System.out.println(dividend / divisor);
+	}
+}
+
+Question 3:
+
+/**
+ * Prints the elements of the specified array on one line, with the elements separated by commas. 
+ */
+public static void printArrayOnOneLine(String[] array) {
+	String arrayContents = "";
+	for (int index = 0; index < array.length; index++) {
+		if (index != array.length - 1) {
+			arrayContents += (array[index] + ", ");
+		} else {
+			arrayContents += array[index];
+		}
+	}
+	System.out.println(arrayContents);
+}
+
+Question 4:
+
+/**
+ * Combines the elements of arrayOne and arrayTwo into one array. The elements of arrayTwo come after the elements of arrayOne, and the order of the elements from
+ * left to right in each array is maintained.
+ */
+public static String[] concatenateArrays(String[] arrayOne, String[] arrayTwo) {
+	int concatenatedArrayLength = arrayOne.length + arrayTwo.length;
+	String[] concatenatedArray = new String[concatenatedArrayLength];
+	for (int index = 0; index < arrayOne.length; index++) {
+		concatenatedArray[index] = arrayOne[index];
+	}
+	for (int arrayTwoIndex = 0; arrayTwoIndex < arrayTwo.length; arrayTwoIndex++) {
+		// We need to somehow match the indexes of concatenatedArray and arrayTwo such that arrayTwo's elements don't go in the indexes taken up by arrayOne's elements.
+		// The last element of arrayOne went in concatenatedArray[arrayOne.length - 1]
+		// The element at arrayTwo[0] should go in concatenatedArray[arrayOne.length]
+		// The element at arrayTwo[1] should go in concatenatedArray[arrayOne.length + 1]
+		// Therefore, the element at arrayTwo[arrayTwoIndex] should go in concatenatedArray[arrayOne.length + arrayTwoIndex]
+		concatenatedArray[arrayOne.length + arrayTwoIndex] = arrayTwo[arrayTwoIndex];
+	}
+	return concatenatedArray;
+}
+
+Main method code for testing questions 1-4 (test cases):
+
+public static void main(String[] args) {
+	System.out.println(multiplyDoubles(2.5, 5.0));
+	System.out.println(multiplyDoubles(-2.41, 0.3));
+	divideDoubles(3.2, 1.6);
+	divideDoubles(5.4, -0.6);
+	divideDoubles(1.5, 0.0);
+		
+	String[] firstArray = {"Please", "print", "the", "contents", "of", "this", "array"};
+	String[] emptyArray = {};
+	String[] oneElementArray = {"Word"};
+	printArrayOnOneLine(firstArray);
+	printArrayOnOneLine(emptyArray);
+	printArrayOnOneLine(oneElementArray);
+		
+	String[] secondArray = {"Concatenate", "my", "contents", "to", "firstArray"};
+		
+	printArrayOnOneLine(concatenateArrays(firstArray, secondArray));
+	printArrayOnOneLine(concatenateArrays(firstArray, emptyArray));
+}
+
+
+Lesson 8:
+
+1. You write static methods if the method does not make reference to the class-defined state of an object. You write instance methods otherwise.
+
+2. attributes
+
+3. A reference (also known as a pointer) is like the name of an object. It is not the object itself; it is simply how programmers refer to the object.
+   A reference does not have state and behaviour like an object does. The analogy I like to use is that a reference is to an object as the word "watermelon"
+   is to an actual watermelon.
+
+4. A boolean is not an object because it does not have defined behaviour. You cannot call methods on booleans.
+
+5. To define a constructor/constructors, to define attributes, and to define methods. Note: not all classes have methods. Those classes INHERIT methods from superclasses.
+
+6. name
+
+7. A constructor creates an instance of a class.
+   Syntax: ClassName object = new ClassName(parameters...);
+
+8. behaviour
