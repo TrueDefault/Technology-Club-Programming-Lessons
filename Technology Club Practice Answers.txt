@@ -11,6 +11,21 @@ Lesson 1:
 
    The statement is FALSE!
 
+4a. We test the divisibility of 7456 by 11 with the following code:
+	
+	int remainderOne = 7456 % 11;
+	System.out.println(remainderOne);
+	
+	The program prints the number 9, so we conclude that 7456 is not divisible by 11, and 
+	that the remainder is 9.
+
+4b. We test the divisibility of 20306 by 26 with the following code:
+
+	int remainderTwo = 20306 % 26;
+	System.out.println(remainderTwo);
+	
+	The output is 0, so we conclude that 20306 is divisible by 26 because the remainder is 0.
+
 
 Lesson 2:
 
